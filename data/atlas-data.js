@@ -482,7 +482,7 @@ window.ATLAS_DATA = {
       moderno: true,
       descripcion: "Los san del Kalahari (Botsuana, Namibia) representan el linaje humano más divergente que se conoce: su rama se separó del resto de la humanidad hace más de 100.000 años. Población viva, documentada por genética moderna — no por ADN antiguo.",
       cautela: "Población viva, no muestra arqueológica. Su distribución actual en zonas áridas es en parte el resultado del desplazamiento por la expansión bantú, no su rango original.",
-      retrato: { src: null, alt: "Sin retrato: no generamos caras de poblaciones vivas" },
+      retrato: { src: "assets/retratos/africa_san.jpg", alt: "Retrato ilustrativo de un hombre san (khoisan)", nota: "Retrato ilustrativo generado por IA; no representa a un individuo concreto.", credito: "Retrato generado por IA" },
     },
     {
       id: "africa_pigmeos",
@@ -495,7 +495,7 @@ window.ATLAS_DATA = {
       moderno: true,
       descripcion: "Cazadores-recolectores de la selva del Congo (mbuti, baka y grupos afines): linajes profundos de África central. La baja estatura es una adaptación a la selva tropical densa. Población viva, documentada por genética moderna — no por ADN antiguo.",
       cautela: "'Pigmeo' agrupa a varios pueblos distintos con historias propias; no es un solo linaje ni una sola cultura.",
-      retrato: { src: null, alt: "Sin retrato: no generamos caras de poblaciones vivas" },
+      retrato: { src: "assets/retratos/africa_pigmeos.jpg", alt: "Retrato ilustrativo de un hombre del bosque centroafricano", nota: "Retrato ilustrativo generado por IA; no representa a un individuo concreto.", credito: "Retrato generado por IA" },
     },
     {
       id: "africa_niloticos",
@@ -508,7 +508,7 @@ window.ATLAS_DATA = {
       moderno: true,
       descripcion: "Pastores de la sabana del Nilo Blanco (dinka, nuer, masái y afines): entre las estaturas promedio más altas del mundo, con extremidades largas que disipan el calor seco extremo. Población viva, documentada por genética moderna — no por ADN antiguo.",
       cautela: "'Nilótico' es una categoría lingüístico-cultural, no un linaje genético único.",
-      retrato: { src: null, alt: "Sin retrato: no generamos caras de poblaciones vivas" },
+      retrato: { src: "assets/retratos/africa_niloticos.jpg", alt: "Retrato ilustrativo de un hombre nilótico", nota: "Retrato ilustrativo generado por IA; no representa a un individuo concreto.", credito: "Retrato generado por IA" },
     },
     {
       id: "africa_bantu",
@@ -521,7 +521,7 @@ window.ATLAS_DATA = {
       moderno: true,
       descripcion: "La expansión bantú —desde ~1500 a. C., originada en la frontera entre Camerún y Nigeria— es la mayor expansión demográfica de la historia africana: agricultura e hierro que reemplazaron o absorbieron a los cazadores-recolectores previos en gran parte del continente. Población viva, documentada por genética moderna — no por ADN antiguo.",
       cautela: "'Bantú' es una familia lingüística de enorme diversidad interna, no una población homogénea.",
-      retrato: { src: null, alt: "Sin retrato: no generamos caras de poblaciones vivas" },
+      retrato: { src: "assets/retratos/africa_bantu.jpg", alt: "Retrato ilustrativo de un hombre bantú", nota: "Retrato ilustrativo generado por IA; no representa a un individuo concreto.", credito: "Retrato generado por IA" },
     },
     {
       id: "africa_cushita",
@@ -534,7 +534,7 @@ window.ATLAS_DATA = {
       moderno: true,
       descripcion: "Pueblos del Cuerno de África (oromo, somalí, amhara y afines): resultado de un mestizaje antiguo —hace 3.000 a 5.000 años— entre linajes africanos y migraciones de regreso desde Oriente Medio. Población viva, documentada por genética moderna — no por ADN antiguo.",
       cautela: "El componente euroasiático del Cuerno es prehistórico, no colonial ni reciente.",
-      retrato: { src: null, alt: "Sin retrato: no generamos caras de poblaciones vivas" },
+      retrato: { src: "assets/retratos/africa_cushita.jpg", alt: "Retrato ilustrativo de un hombre del Cuerno de África", nota: "Retrato ilustrativo generado por IA; no representa a un individuo concreto.", credito: "Retrato generado por IA" },
     },
     {
       id: "africa_amazigh",
@@ -547,7 +547,7 @@ window.ATLAS_DATA = {
       moderno: true,
       descripcion: "Pueblos amazigh del norte de África: continuidad con linajes paleolíticos del Magreb —como el de Taforalt, que el mapa sí tiene como muestra antigua— más capas de mezcla mediterránea. Población viva, documentada por genética moderna — no por ADN antiguo.",
       cautela: "El Sáhara fue una barrera intermitente, no un muro permanente: hubo idas y vueltas durante milenios.",
-      retrato: { src: null, alt: "Sin retrato: no generamos caras de poblaciones vivas" },
+      retrato: { src: "assets/retratos/africa_amazigh.jpg", alt: "Retrato ilustrativo de un hombre amazigh", nota: "Retrato ilustrativo generado por IA; no representa a un individuo concreto.", credito: "Retrato generado por IA" },
     },
     {
       id: "australopiteco",
