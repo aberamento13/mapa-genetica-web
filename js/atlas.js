@@ -886,8 +886,21 @@
     });
   }
 
+  /* Los eslabones se apagan al extinguirse: fundido suave, no corte seco.
+     T = edad actual (años AP, 0 = hoy). Visible pleno mientras T >= E;
+     se disuelve entre E y E-W. */
+  function factorExtincion(z) {
+    const E = z.extincion_ap;
+    if (!E) return 1;
+    const T = -estado.year;
+    if (T >= E) return 1;
+    const W = Math.min(Math.max(E * 0.2, 8000), 300000);
+    if (T <= E - W) return 0;
+    return (T - (E - W)) / W;
+  }
+
   function zonaVisible(z) {
-    return z._sitios.some((s) => sitioVisible(s));
+    return z._sitios.some((s) => sitioVisible(s)) && factorExtincion(z) > 0;
   }
 
   function sitioVisible(s) {
@@ -1014,6 +1027,7 @@
       const esta = estado.capaTarjetas.hasLayer(z._card);
       if (debe && !esta) estado.capaTarjetas.addLayer(z._card);
       if (!debe && esta) estado.capaTarjetas.removeLayer(z._card);
+      if (debe && z._card.setOpacity) z._card.setOpacity(factorExtincion(z));
     });
     marcarTarjetas();
     ajustarTamanoEtiquetas();
@@ -1115,13 +1129,14 @@
     estado.zonas.forEach((z) => {
       if (!z._capas) return;
       const base = opacidadZona();
+      const fade = factorExtincion(z);
       z._capas.forEach((c) => {
         const t = estado.year + c.r.edad_ap;            // 0 en la fecha del sitio
         const fill = clamp((t + 4000) / 9000, 0, 1);     // arranca antes y se profundiza
         const spread = clamp(t / 28000, 0, 1);           // el campo se extiende
         c.activo = fill > 0.01;
-        c.fillObj = fill * base;
-        c.haloObj = fill * (0.12 + 0.10 * spread);
+        c.fillObj = fill * base * fade;
+        c.haloObj = fill * (0.12 + 0.10 * spread) * fade;
         c.pesosObj = HALOS.map((cfg) => cfg.w * (0.55 + 1.15 * spread));
       });
     });
