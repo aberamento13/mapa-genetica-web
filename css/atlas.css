@@ -469,13 +469,13 @@ h1 {
   height: 205px;
   margin: -15px -24px 14px;
   overflow: hidden;
-  background: #151b24;
+  background: #000;
 }
 .detalle-foto img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center 28%;
+  object-fit: contain;
+  object-position: center;
   display: block;
   filter: sepia(.12) contrast(1.04);
 }

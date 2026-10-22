@@ -635,6 +635,7 @@ window.ATLAS_DATA = {
       color: "#c49a5a",
       etiqueta: [20.0, 10.0],
       sitios: ["jebel_irhoud", "omo_kibish"],
+      extincion_ap: 60000,
       descripcion: "Los primeros Homo sapiens (~300 mil años, Jebel Irhoud, Marruecos): cara ya moderna con cráneo todavía alargado. El origen de nuestra especie es africano —y mucho más antiguo de lo que se creía hasta 2017.",
       cautela: "'Sapiens temprano' es un mosaico de poblaciones africanas, no un único grupo.",
       retrato: { src: "assets/retratos/sapiens_temprano.jpg", alt: "Retrato interpretativo de un sapiens temprano (Jebel Irhoud)", nota: "Retrato interpretativo generado por IA a partir de reconstrucciones de museo; no es una reconstrucción publicada.", credito: "Retrato generado por IA" },

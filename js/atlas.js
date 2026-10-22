@@ -614,11 +614,14 @@
     });
   }
 
+  /* Nombre para rótulos: las zonas modernas muestran su nombre propio,
+     nunca la categoría "Población actual". */
+  function nombreEtiqueta(z) { return z.moderno ? z.nombre : (z.poblacion || z.nombre); }
   /* Rotulo del mapa: solo el retrato y el nombre de la poblacion, sin recuadro,
      situado dentro del territorio que ocupa. */
   function crearEtiqueta(z) {
     const retrato = z.retrato || {};
-    const nombre = z.poblacion || z.nombre;
+    const nombre = nombreEtiqueta(z);
     const foto = retrato.src
       ? `<img src="${escapar(retrato.src)}" alt="${escapar(retrato.alt || nombre)}" loading="lazy">`
       : SVG_SILUETA('silueta-svg');
@@ -859,12 +862,12 @@
       b.className = 'zona-item';
       b.dataset.zona = z.id;
       b.style.setProperty('--c', colorZona(z));
-      b.title = `${z.poblacion || z.nombre} · ${periodoZona(z)}`;
+      b.title = `${nombreEtiqueta(z)} · ${periodoZona(z)}`;
       b.setAttribute('aria-pressed', 'false');
       b.innerHTML = `
         <span class="thumb${retrato.src ? '' : ' silueta'}">${thumb}</span>
         <span class="texto">
-          <span class="nombre">${escapar(z.poblacion || z.nombre)}</span>
+          <span class="nombre">${escapar(nombreEtiqueta(z))}</span>
           <span class="meta">${escapar(z.nombre)} · ${escapar(paises)} · ${escapar(periodoZona(z))} · <b>${z._sitios.length} sitios</b></span>
         </span>`;
       b.addEventListener('click', () => seleccionarZona(z.id, true));
@@ -1365,7 +1368,7 @@
       </div>
       <div class="detalle-cabeza">
         <div>
-          <p class="detalle-eyebrow">${escapar(z.poblacion || 'Zona de muestras')}</p>
+          <p class="detalle-eyebrow">${escapar(z.moderno ? 'ADN moderno' : (z.poblacion || 'Zona de muestras'))}</p>
           <h2>${escapar(z.nombre)}</h2>
         </div>
         <span class="edad-sitio">${z.moderno ? 'Actualidad · ADN moderno' : escapar(periodoZona(z))}</span>
@@ -1401,7 +1404,7 @@
 
     const linaje = s.linaje
       ? `<div class="detalle-extra lineages">
-          <p><span class="mini-rotulo">Linaje documentado</span><b>${escapar(s.linaje)}</b>${z.poblacion ? ` <span class="nota-linea">${escapar(z.poblacion)}</span>` : ''}</p>
+          <p><span class="mini-rotulo">Linaje documentado</span><b>${escapar(s.linaje)}</b>${(!z.moderno && z.poblacion) ? ` <span class="nota-linea">${escapar(z.poblacion)}</span>` : ''}</p>
           <p class="mini-nota">Es el componente de ascendencia que reporta el estudio citado: una relación de descendencia medida, no una categoría étnica ni una frontera.</p>
         </div>`
       : '';
