@@ -53,7 +53,7 @@ window.ATLAS_DATA = {
       sitios: ["mota"],
       descripcion: "Mota, en las tierras altas de Etiopía, es una de las pocas ventanas genómicas al África antigua de este conjunto. Su genoma documenta una migración euroasiática hacia África oriental hace unos 3.000 años.",
       cautela: "Una sola muestra no representa la diversidad del continente. La zona dibujada es una envolvente de muestreo, no un territorio.",
-      retrato: { src: "assets/retratos/mota.jpg", alt: "Retrato interpretativo de Mota (Cazadores de África oriental)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" }
+      retrato: { src: "assets/retratos/mota.webp", alt: "Retrato interpretativo de Mota (Cazadores de África oriental)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" }
     },
     {
       id: "europa",
@@ -65,7 +65,7 @@ window.ATLAS_DATA = {
       sitios: ["oase", "kostenki14", "sunghir", "loschbour", "stuttgart", "yamnaya"],
       descripcion: "Seis sitios que van del Paleolítico superior a la Edad del Bronce. Reúnen cazadores-recolectores, agricultores neolíticos y pastores de la estepa: no son un bloque homogéneo ni una sola ascendencia.",
       cautela: "La zona es un envolvente de sitios muy separados en el tiempo y el espacio. No es una frontera genética ni una identidad cultural.",
-      retrato: { src: "assets/retratos/loschbour.jpg", alt: "Retrato interpretativo de Loschbour (Euroasi?ticos)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" }
+      retrato: { src: "assets/retratos/loschbour.webp", alt: "Retrato interpretativo de Loschbour (Euroasi?ticos)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" }
     },
     {
       id: "siberia",
@@ -77,7 +77,7 @@ window.ATLAS_DATA = {
       sitios: ["ust-ishim", "malta1"],
       descripcion: "Ust'-Ishim (~45.000 AP) y Mal'ta 1 (~24.000 AP) son dos ventanas al Paleolítico siberiano, separadas por unos 20.000 años. Mal'ta define la ascendencia antigua euroasiática del norte (ANE).",
       cautela: "Dos individuos no resumen Siberia. La zona es una envolvente de muestras, no un territorio ni una ruta única.",
-      retrato: { src: "assets/retratos/malta_1.jpg", alt: "Retrato interpretativo de Mal'ta 1 (Siberianos arcaicos)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" }
+      retrato: { src: "assets/retratos/malta_1.webp", alt: "Retrato interpretativo de Mal'ta 1 (Siberianos arcaicos)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" }
     },
     {
       id: "asia_oriental",
@@ -89,7 +89,7 @@ window.ATLAS_DATA = {
       sitios: ["tianyuan"],
       descripcion: "Tianyuan, en China, es un genoma del Paleolítico superior (~40.000 AP). Se separa de las poblaciones europeas y muestra afinidad con asiáticos orientales actuales.",
       cautela: "Un solo individuo no representa la diversidad del este de Asia. La zona es una envolvente de muestreo.",
-      retrato: { src: "assets/retratos/tianyuan.jpg", alt: "Retrato interpretativo de Tianyuan (Cazadores de China oriental)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" }
+      retrato: { src: "assets/retratos/tianyuan.webp", alt: "Retrato interpretativo de Tianyuan (Cazadores de China oriental)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" }
     },
     {
       id: "norteamerica",
@@ -101,7 +101,7 @@ window.ATLAS_DATA = {
       sitios: ["anzick", "kennewick"],
       descripcion: "Anzick-1 (~12.600 AP, Montana) y Kennewick Man / Ancient One (~8.500 AP, Washington) muestran afinidad con nativos americanos. Son dos individuos separados por unos 4.000 años.",
       cautela: "La zona es una envolvente de dos sitios muy distantes. No es un territorio ni una identidad única; el caso Kennewick involucra comunidades nativas y procesos de consentimiento.",
-      retrato: { src: "assets/retratos/kennewick.jpg", alt: "Retrato interpretativo de Kennewick Man / Ancient One (Norteamericanos)", nota: "Retrato generado por IA basado en la reconstrucción facial publicada del individuo; interpretación artística.", credito: "Retrato generado por IA" }
+      retrato: { src: "assets/retratos/kennewick.webp", alt: "Retrato interpretativo de Kennewick Man / Ancient One (Norteamericanos)", nota: "Retrato generado por IA basado en la reconstrucción facial publicada del individuo; interpretación artística.", credito: "Retrato generado por IA" }
     },
     {
       id: "mesoamerica",
@@ -113,7 +113,7 @@ window.ATLAS_DATA = {
       sitios: ["mayahak", "saki"],
       descripcion: "Mayahak Cab Pek (~9.300 AP) y Saki Tzul (~7.400 AP), en Belice, documentan ocupaciones tempranas de Mesoamérica y la transición hacia economías agrícolas.",
       cautela: "Dos sitios no representan toda Mesoamérica. La zona es una envolvente de muestras, no una frontera cultural.",
-      retrato: { src: "assets/retratos/mayahak.jpg", alt: "Retrato interpretativo de Mayahak Cab Pek (Mayas)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" }
+      retrato: { src: "assets/retratos/mayahak.webp", alt: "Retrato interpretativo de Mayahak Cab Pek (Mayas)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" }
     },
     {
       id: "brasil",
@@ -125,7 +125,7 @@ window.ATLAS_DATA = {
       sitios: ["lapa", "laranjal", "jabuticabeira"],
       descripcion: "Lapa do Santo (~9.600 AP), Laranjal (~6.700 AP) y Jabuticabeira 2 (~2.000 AP) cubren cazadores-recolectores del este de Brasil y sambaquis costeros del sur. Son tres contextos distintos, no una sola población.",
       cautela: "La zona es una envolvente de sitios separados por miles de años. No es un territorio ni una frontera genética.",
-      retrato: { src: "assets/retratos/lapa_do_santo.jpg", alt: "Retrato interpretativo de Lapa do Santo (Lagoa Santa)", nota: "Retrato generado por IA basado en la reconstrucción facial publicada del individuo; interpretación artística.", credito: "Retrato generado por IA" },
+      retrato: { src: "assets/retratos/lapa_do_santo.webp", alt: "Retrato interpretativo de Lapa do Santo (Lagoa Santa)", nota: "Retrato generado por IA basado en la reconstrucción facial publicada del individuo; interpretación artística.", credito: "Retrato generado por IA" },
       extra: {
         src: "assets/luzia.jpg",
         alt: "Reconstrucción facial de Luzia, Lagoa Santa",
@@ -145,7 +145,7 @@ window.ATLAS_DATA = {
       sitios: ["cuncaicha", "lauricocha", "la_galgada", "laramate"],
       descripcion: "Cuncaicha (~9.000 AP), Lauricocha (~8.600 AP), La Galgada (~4.100 AP) y Laramate (~900 AP) recorren la ocupación de los Andes centrales, desde el Pleistoceno final hasta el período Inca.",
       cautela: "La zona es una envolvente de sitios peruanos. No es una frontera ni una sola población; los Andes tuvieron movimientos y mezclas repetidas.",
-      retrato: { src: "assets/retratos/cuncaicha.jpg", alt: "Retrato interpretativo de Cuncaicha (Andinos)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" }
+      retrato: { src: "assets/retratos/cuncaicha.webp", alt: "Retrato interpretativo de Cuncaicha (Andinos)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" }
     },
     {
       id: "cono_sur",
@@ -157,7 +157,7 @@ window.ATLAS_DATA = {
       sitios: ["arroyo", "laguna", "los_rieles"],
       descripcion: "Arroyo Seco II (~7.700 AP), Laguna Chica (~6.800 AP) y Los Rieles (~10.900–5.100 AP) documentan cazadores-recolectores de la Pampa argentina y Chile central.",
       cautela: "La zona es una envolvente de sitios de Argentina y Chile. No es un territorio ni una identidad cultural única.",
-      retrato: { src: "assets/retratos/arroyo_seco_ii.jpg", alt: "Retrato interpretativo de Arroyo Seco II (Pampeanos)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" }
+      retrato: { src: "assets/retratos/arroyo_seco_ii.webp", alt: "Retrato interpretativo de Arroyo Seco II (Pampeanos)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" }
     },
     {
       id: "magreb",
@@ -169,7 +169,7 @@ window.ATLAS_DATA = {
       sitios: ["taforalt"],
       descripcion: "Los individuos de Taforalt (Marruecos) son la muestra más antigua del Magreb y el linaje africano más emparentado con el de los natufienses del Levante. Muestrean un África que ya había recibido poblaciones eurasias y que después las expandió hacia el sur.",
       cautela: "Un solo sitio y una sola ocupación. El linaje del Magreb no equivale a las poblaciones actuales del norte de África, formadas después con la expansión de los agricultores neolíticos.",
-      retrato: { src: "assets/retratos/taforalt.jpg", alt: "Retrato interpretativo de Taforalt I (Magreb)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
+      retrato: { src: "assets/retratos/taforalt.webp", alt: "Retrato interpretativo de Taforalt I (Magreb)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
     },
     {
       id: "africa_central",
@@ -181,7 +181,7 @@ window.ATLAS_DATA = {
       sitios: ["shum_laka"],
       descripcion: "Shum Laka (Camerún) es un cazador-recolector de hace unos 7.000 años cuyo genoma combina un componente africano y otro eurasiático antiguo: documenta contactos muy tempranos entre Eurasia y África profunda.",
       cautela: "Un solo individuo, de un sitio de altura. Demuestra un contacto, no una colonización: no sabemos si quedó descendencia en África.",
-      retrato: { src: "assets/retratos/shum_laka.jpg", alt: "Retrato interpretativo de Shum Laka (Cazadores de África oriental)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
+      retrato: { src: "assets/retratos/shum_laka.webp", alt: "Retrato interpretativo de Shum Laka (Cazadores de África oriental)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
     },
     {
       id: "africa_sur",
@@ -193,7 +193,7 @@ window.ATLAS_DATA = {
       sitios: ["klasies"],
       descripcion: "Los individuos de Klasies River (Sudáfrica) conservan la ascendencia que hoy sólo sobrevive en los grupos san del sur. Es el linaje africano más arcaico conservado en el registro genómico.",
       cautela: "Es una ocupación tardía, muy posterior a los primeros humanos de África; no describe al África de los orígenes.",
-      retrato: { src: "assets/retratos/klasies_river.jpg", alt: "Retrato interpretativo de Cueva de Klasies (Khoi-San)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
+      retrato: { src: "assets/retratos/klasies_river.webp", alt: "Retrato interpretativo de Cueva de Klasies (Khoi-San)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
     },
     {
       id: "levante",
@@ -205,7 +205,7 @@ window.ATLAS_DATA = {
       sitios: ["ain_ghazal", "catalhoyuk"],
       descripcion: "Ain Ghazal (Jordania, ~10.000 AP) y Çatalhöyük (Turquía, ~7.500 AP) marcan el punto de partida de la expansión de los agricultores del Creciente Fértil hacia Europa. El linaje levantino es la base profunda de casi todos los euroasiáticos actuales.",
       cautela: "Ain Ghazal y Çatalhöyük no son la misma población: el primero es cazador-recolector y el segundo agricultor. El rótulo nombra el linaje compartido, no un pueblo único.",
-      retrato: { src: "assets/retratos/ain_ghazal.jpg", alt: "Retrato interpretativo de Ain Ghazal (Levantinos)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
+      retrato: { src: "assets/retratos/ain_ghazal.webp", alt: "Retrato interpretativo de Ain Ghazal (Levantinos)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
     },
     {
       id: "estepa",
@@ -217,7 +217,7 @@ window.ATLAS_DATA = {
       sitios: ["campana", "escita"],
       descripcion: "La Campana Campana (Quedlinburg, Alemania, ~4.500 AP) y la Escita de Berel (Kazajistán, ~2.500 AP) son dos momentos del mismo linaje: la estepa euroasiática, que llega al centro de Europa y después al corazón de Asia.",
       cautela: "No es una ocupación continua: entre el Neolítico y la Edad del Bronce hay milenios de contacto. La Campana Campana es una élite con más ancestría de la estepa que sus vecinos, no una población que reemplazó a los demás.",
-      retrato: { src: "assets/retratos/escita_berel.jpg", alt: "Retrato interpretativo de Escita de Berel (Pastores de la estepa)", nota: "Retrato generado por IA basado en la reconstrucción facial publicada del individuo; interpretación artística.", credito: "Retrato generado por IA" },
+      retrato: { src: "assets/retratos/escita_berel.webp", alt: "Retrato interpretativo de Escita de Berel (Pastores de la estepa)", nota: "Retrato generado por IA basado en la reconstrucción facial publicada del individuo; interpretación artística.", credito: "Retrato generado por IA" },
     },
     {
       id: "siberia_oriental",
@@ -229,7 +229,7 @@ window.ATLAS_DATA = {
       sitios: ["afontova", "belkachi"],
       descripcion: "Afontova Gora (Krasnoyarsk) y Belkachi (Yakutia) documentan dos linajes siberianos antiguos: el Norte Asiático Antiguo y los Siberianos del Norte, parientes cercanos de los nativos americanos.",
       cautela: "Los linajes siberianos son parientes de los nativos americanos, no sus ancestros: la separación ocurrió antes.",
-      retrato: { src: "assets/retratos/belkachi.jpg", alt: "Retrato interpretativo de Belkachi (Siberianos del Norte)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
+      retrato: { src: "assets/retratos/belkachi.webp", alt: "Retrato interpretativo de Belkachi (Siberianos del Norte)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
     },
     {
       id: "china_agricola",
@@ -241,7 +241,7 @@ window.ATLAS_DATA = {
       sitios: ["mogou"],
       descripcion: "Mogou (Gansu, ~4.000 AP) documenta la expansión de los agricultores neolíticos del Huang He hacia el norte de China: un movimiento distinto y posterior al de los cazadores de Tianyuan.",
       cautela: "Es un sitio provincial: su linaje no representa a toda China, ni antes ni después.",
-      retrato: { src: "assets/retratos/mogou.jpg", alt: "Retrato interpretativo de Mogou (Chinos del norte)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
+      retrato: { src: "assets/retratos/mogou.webp", alt: "Retrato interpretativo de Mogou (Chinos del norte)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
     },
     {
       id: "japon",
@@ -253,7 +253,7 @@ window.ATLAS_DATA = {
       sitios: ["sakaguchi"],
       descripcion: "Sakaguchi (Aomori, Japón, ~5.000 AP) documenta el linaje Jomon, la población de cazadores-recolectores de las islas japonesas anterior a la influencia continental y a los ainus de Hokkaido.",
       cautela: "El linaje Jomon se extinguió en la práctica: los ainus actuales descienden de otros grupos y su aporte al genoma japonés actual es mínimo.",
-      retrato: { src: "assets/retratos/jomon.jpg", alt: "Retrato interpretativo de Sakaguchi (Jomon) (Jomon)", nota: "Retrato generado por IA basado en la reconstrucción facial publicada del individuo; interpretación artística.", credito: "Retrato generado por IA" },
+      retrato: { src: "assets/retratos/jomon.webp", alt: "Retrato interpretativo de Sakaguchi (Jomon) (Jomon)", nota: "Retrato generado por IA basado en la reconstrucción facial publicada del individuo; interpretación artística.", credito: "Retrato generado por IA" },
     },
     {
       id: "harappa",
@@ -265,7 +265,7 @@ window.ATLAS_DATA = {
       sitios: ["rakhigarhi"],
       descripcion: "Rakhigarhi (Haryana, India, ~4.500 AP) muestra que la cultura del Indo, la más urbana de su tiempo, se apoyó en el mismo componente de la estepa euroasiática que llegó a Europa.",
       cautela: "Los Harappans no son los ancestros de la mayoría de los indios actuales; su legado es sobre todo urbano y cultural.",
-      retrato: { src: "assets/retratos/rakhigarhi.jpg", alt: "Retrato interpretativo de Rakhigarhi IV (De la estepa (Harappans))", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
+      retrato: { src: "assets/retratos/rakhigarhi.webp", alt: "Retrato interpretativo de Rakhigarhi IV (De la estepa (Harappans))", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
     },
     {
       id: "filipinas",
@@ -277,7 +277,7 @@ window.ATLAS_DATA = {
       sitios: ["callao"],
       descripcion: "Callao (Luzon, Filipinas, ~5.000 AP) es una de las muestras más antiguas del archipiélago y precede a la expansión austronésica: su genoma es emparentado con los austronésicos, pero no pertenece a la expansión salida de Taiwan.",
       cautela: "Un solo individuo, en una cueva, de un archipiélago con decenas de islas y muchos poblamientos posteriores.",
-      retrato: { src: "assets/retratos/callao.jpg", alt: "Retrato interpretativo de Callao (Austronésicos)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
+      retrato: { src: "assets/retratos/callao.webp", alt: "Retrato interpretativo de Callao (Austronésicos)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
     },
     {
       id: "australia",
@@ -289,7 +289,7 @@ window.ATLAS_DATA = {
       sitios: ["mungo"],
       descripcion: "Lake Mungo 3 (Australia, ~7.000 AP) conserva el linaje 'papúa', la rama más profunda de la variación humana fuera de África, separada del resto de los eurasiáticos hace decenas de miles de años.",
       cautela: "'Papúa' es una etiqueta genética, no una etnia: en Oceanía conviven linajes distintos y la expansión austronésica los cubre sólo en parte.",
-      retrato: { src: "assets/retratos/papua_altiplano.jpg", alt: "Retrato interpretativo de Lake Mungo 3 (Papúas)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
+      retrato: { src: "assets/retratos/papua_altiplano.webp", alt: "Retrato interpretativo de Lake Mungo 3 (Papúas)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
     },
     {
       id: "polinesia",
@@ -301,7 +301,7 @@ window.ATLAS_DATA = {
       sitios: ["tonga"],
       descripcion: "Tonga (~3.000 AP) es la fase final de la expansión austronésica, la del Moana: el linaje que llegó desde Taiwan y las Filipinas al Pacífico remoto en un par de milenios.",
       cautela: "La expansión austronésica dejó una huella genética menor en Oceanía: la mayoría de las poblaciones del Pacífico son de linaje papúa, con mestizaje austronésico variable.",
-      retrato: { src: "assets/retratos/lapita.jpg", alt: "Retrato interpretativo de Tonga (Lapita) (Polinesios)", nota: "Retrato generado por IA basado en la reconstrucción facial publicada del individuo; interpretación artística.", credito: "Retrato generado por IA" },
+      retrato: { src: "assets/retratos/lapita.webp", alt: "Retrato interpretativo de Tonga (Lapita) (Polinesios)", nota: "Retrato generado por IA basado en la reconstrucción facial publicada del individuo; interpretación artística.", credito: "Retrato generado por IA" },
     },
     {
       id: "beringia",
@@ -313,7 +313,7 @@ window.ATLAS_DATA = {
       sitios: ["upward"],
       descripcion: "Upward Sun River (Alaska, ~11.600 AP) es el linaje 'beringiano antiguo', la rama más profunda de los nativos americanos. Se separó de las demás poblaciones americanas hace más de 20.000 años y no tiene descendientes vivos conocidos.",
       cautela: "Un solo individuo, un niño. Su linaje se extinguió: prueba que hubo más de una población en América, no una sola salida.",
-      retrato: { src: "assets/retratos/upward_sun_river.jpg", alt: "Retrato interpretativo de Upward Sun River (Beringianos antiguos)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
+      retrato: { src: "assets/retratos/upward_sun_river.webp", alt: "Retrato interpretativo de Upward Sun River (Beringianos antiguos)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
     },
     {
       id: "inuit",
@@ -325,7 +325,7 @@ window.ATLAS_DATA = {
       sitios: ["nunalleq"],
       descripcion: "Nunalleq (Groenlandia, ~3.400 AP) documenta el linaje 'Paleo-inuit', la población que ocupaba el Ártico americano milenios antes del linaje Thule que llegó desde Siberia.",
       cautela: "Los Paleo-inuit se extinguieron: los inuit actuales descienden del linaje Thule, no de ellos. No hay que leer 'inuit' como una población continua.",
-      retrato: { src: "assets/retratos/qilakitsoq.jpg", alt: "Retrato interpretativo de Nunalleq (Paleo-inuit)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
+      retrato: { src: "assets/retratos/qilakitsoq.webp", alt: "Retrato interpretativo de Nunalleq (Paleo-inuit)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
     },
     {
       id: "paleoamericanos",
@@ -337,7 +337,7 @@ window.ATLAS_DATA = {
       sitios: ["tayos", "fells"],
       descripcion: "Cueva de los Tayos (Bolivia, ~12.000 AP) y Fell's Cave (Chile, ~10.000 AP) documentan los linajes 'paleoamericanos' más antiguos de Sudamérica, anteriores a los linajes que portaron los grupos de la Amazonía y los Andes.",
       cautela: "Son parientes cercanos de los nativos americanos actuales, no sus ancestros directos: son ramas hermanas de un mismo origen, y la relación exacta sigue en discusión.",
-      retrato: { src: "assets/retratos/fells_cave.jpg", alt: "Retrato interpretativo de Fell's Cave 3 (Paleoamericanos)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
+      retrato: { src: "assets/retratos/fells_cave.webp", alt: "Retrato interpretativo de Fell's Cave 3 (Paleoamericanos)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
     },
     {
       id: "chinchorro",
@@ -349,7 +349,7 @@ window.ATLAS_DATA = {
       sitios: ["chinchorro"],
       descripcion: "Los individuos Chinchorro (valle de Camarones, Atacama, ~7.000 AP) son una de las poblaciones más antiguas del desierto de Atacama, anterior a Tiwanaku y a los Incas.",
       cautela: "El nombre es el de la cultura arqueológica, no un linaje cerrado: su ascendencia es el componente andino antiguo.",
-      retrato: { src: "assets/retratos/chinchorro.jpg", alt: "Retrato interpretativo de Chinchorro (Camarones) (Chinchorro)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
+      retrato: { src: "assets/retratos/chinchorro.webp", alt: "Retrato interpretativo de Chinchorro (Camarones) (Chinchorro)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
     },
     {
       id: "norteamerica_oeste",
@@ -361,7 +361,7 @@ window.ATLAS_DATA = {
       sitios: ["spirit_cave", "tucson", "sonoita", "lovelock"],
       descripcion: "Spirit Cave, Tucson, Sonoita y Lovelock Cave cubren el desierto de América del Norte: los linajes arcaicos del Gran Basin y del Suroeste, y las poblaciones que los antecedieron.",
       cautela: "Cada sitio es un linaje distinto dentro de la misma región; el rótulo agrupa, no unifica.",
-      retrato: { src: "assets/retratos/spirit_cave.jpg", alt: "Retrato interpretativo de Spirit Cave (Norteamericanos)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
+      retrato: { src: "assets/retratos/spirit_cave.webp", alt: "Retrato interpretativo de Spirit Cave (Norteamericanos)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
     },
     {
       id: "norteamerica_este",
@@ -373,7 +373,7 @@ window.ATLAS_DATA = {
       sitios: ["cochiti", "navajo"],
       descripcion: "Cochiti y el Navajo ancestral documentan los linajes de los pueblos originarios del Surooeste de Estados Unidos, los mismos de los pueblos Hopi y Zuñi de hoy.",
       cautela: "Son linajes vivos: el dato no dice de dónde viene 'el americano', sino de dónde viene esta muestra.",
-      retrato: { src: "assets/retratos/cochiti.jpg", alt: "Retrato interpretativo de Cochiti (Pueblos originarios)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
+      retrato: { src: "assets/retratos/cochiti.webp", alt: "Retrato interpretativo de Cochiti (Pueblos originarios)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
     },
     {
       id: "caribe",
@@ -385,7 +385,7 @@ window.ATLAS_DATA = {
       sitios: ["taino"],
       descripcion: "El individuo taíno de Cuba documenta el linaje antillano de las Antillas mayores, casi por completo extinguido tras el contacto.",
       cautela: "Un solo individuo de una población diezmada: su linaje no describe a los pueblos caribeños actuales.",
-      retrato: { src: "assets/retratos/taino.jpg", alt: "Retrato interpretativo de Taino (Cuba) (Antillanos)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
+      retrato: { src: "assets/retratos/taino.webp", alt: "Retrato interpretativo de Taino (Cuba) (Antillanos)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
     },
     {
       id: "sahara",
@@ -397,7 +397,7 @@ window.ATLAS_DATA = {
       sitios: ["takarkori"],
       descripcion: "Los individuos saharianos del Magreb conservan un linaje del Pleistoceno que en el norte de África fue reemplazado por la expansión de los agricultores euroasiáticos.",
       cautela: "El linaje sahariano casi no tiene representantes vivos: el mapa muestra un grupo que en gran medida desapareció.",
-      retrato: { src: "assets/retratos/takarkori.jpg", alt: "Retrato interpretativo de Takarkori (Saharenses)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
+      retrato: { src: "assets/retratos/takarkori.webp", alt: "Retrato interpretativo de Takarkori (Saharenses)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
     },
     {
       id: "india_prehistorica",
@@ -409,7 +409,7 @@ window.ATLAS_DATA = {
       sitios: ["khas"],
       descripcion: "El individuo de Khas, en el Decán, conserva el linaje 'AASI' (Asia del Sur Antiguo): la raíz más antigua de Asia del Sur, anterior a los Indos y a la expansión de la estepa.",
       cautela: "Es un linaje profundo y en buena parte desplazado: hoy convive, diluido, con el componente de la estepa.",
-      retrato: { src: "assets/retratos/khas.jpg", alt: "Retrato interpretativo de Khas (AASI)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
+      retrato: { src: "assets/retratos/khas.webp", alt: "Retrato interpretativo de Khas (AASI)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
     },
     {
       id: "sureste_asiatico",
@@ -421,7 +421,7 @@ window.ATLAS_DATA = {
       sitios: ["niah"],
       descripcion: "Niah, en Borneo, documenta el linaje del Sureste Asiático previo a la expansión austronésica: el sustrato que la expansión de Taiwan iba a poblar el archipiélago.",
       cautela: "Es un linaje pre-austronésico, no el de los austronésicos de hoy: la mezcla posterior es el objeto del debate.",
-      retrato: { src: "assets/retratos/niah.jpg", alt: "Retrato interpretativo de Niah (Austronésicos)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
+      retrato: { src: "assets/retratos/niah.webp", alt: "Retrato interpretativo de Niah (Austronésicos)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
     },
     {
       id: "oceania_pacifico",
@@ -433,7 +433,7 @@ window.ATLAS_DATA = {
       sitios: ["vanuatu", "waka", "samoa", "mangaia"],
       descripcion: "Ma'a (Vanuatu), Waka (Java), Samoa y Mangaia documentan la expansión lapita y austronésica por el Pacífico: el último gran movimiento de pueblos, ya en el Holoceno.",
       cautela: "Los linajes del Pacífico son mezclas, no tipos: estos individuos resumen el proceso de la expansión.",
-      retrato: { src: "assets/retratos/vanuatu.jpg", alt: "Retrato interpretativo de Ma'a (Vanuatu) (Lapita)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
+      retrato: { src: "assets/retratos/vanuatu.webp", alt: "Retrato interpretativo de Ma'a (Vanuatu) (Lapita)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
     },
     {
       id: "levante_sur",
@@ -445,7 +445,7 @@ window.ATLAS_DATA = {
       sitios: ["lb1"],
       descripcion: "LB1, en Haifa, es el linaje levantino local, con una mezcla de la que los euroasiáticos actuales conservan rastros: el componente 'Levantine_N' de la literatura.",
       cautela: "Es un linaje que se extinguió como tal: lo que queda es un componente dentro de poblaciones posteriores.",
-      retrato: { src: "assets/retratos/lb1.jpg", alt: "Retrato interpretativo de LB1 (Levantinos del Sur)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
+      retrato: { src: "assets/retratos/lb1.webp", alt: "Retrato interpretativo de LB1 (Levantinos del Sur)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
     },
     {
       id: "europa_occidental",
@@ -457,7 +457,7 @@ window.ATLAS_DATA = {
       sitios: ["cheddar", "vestonice"],
       descripcion: "Cheddar Man y el individuo de Dolní Věstonice cubren la Europa occidental y el centro-europeo del Paleolítico: los linajes Věstonice y GoyetQ2, la base de los cazadores-recolectores de Europa occidental.",
       cautela: "El linaje Veretice se extinguió en gran parte de Europa al llegar los agricultores; el resto de Europa tiene linajes distintos.",
-      retrato: { src: "assets/retratos/cheddar.jpg", alt: "Retrato interpretativo de Cheddar Man (Europeos arcaicos)", nota: "Retrato generado por IA basado en la reconstrucción facial publicada del individuo (Natural History Museum, Londres); interpretación artística.", credito: "Retrato generado por IA" },
+      retrato: { src: "assets/retratos/cheddar.webp", alt: "Retrato interpretativo de Cheddar Man (Europeos arcaicos)", nota: "Retrato generado por IA basado en la reconstrucción facial publicada del individuo (Natural History Museum, Londres); interpretación artística.", credito: "Retrato generado por IA" },
     },
     {
       id: "tibet",
@@ -469,7 +469,7 @@ window.ATLAS_DATA = {
       sitios: ["baishiya"],
       descripcion: "El individuo de Baishiya, en la Meseta Tibetana, documenta un linaje del Este Asiático Antiguo de hace ~3.000 años, en la altura donde la población es más escasa.",
       cautela: "Una sola muestra en un lugar extremo: sirve para mostrar que había gente, no para describir un linaje regional.",
-      retrato: { src: "assets/retratos/baishiya.jpg", alt: "Retrato interpretativo de Baishiya (Tibetanos)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
+      retrato: { src: "assets/retratos/baishiya.webp", alt: "Retrato interpretativo de Baishiya (Tibetanos)", nota: "Retrato interpretativo generado por IA a partir de la literatura arqueológica; no es una reconstrucción facial publicada.", credito: "Retrato generado por IA" },
     },
     {
       id: "africa_san",
@@ -482,7 +482,7 @@ window.ATLAS_DATA = {
       moderno: true,
       descripcion: "Los san del Kalahari (Botsuana, Namibia) representan el linaje humano más divergente que se conoce: su rama se separó del resto de la humanidad hace más de 100.000 años. Población viva, documentada por genética moderna — no por ADN antiguo.",
       cautela: "Población viva, no muestra arqueológica. Su distribución actual en zonas áridas es en parte el resultado del desplazamiento por la expansión bantú, no su rango original.",
-      retrato: { src: "assets/retratos/africa_san.jpg", alt: "Retrato ilustrativo de un hombre san (khoisan)", nota: "Retrato ilustrativo generado por IA; no representa a un individuo concreto.", credito: "Retrato generado por IA" },
+      retrato: { src: "assets/retratos/africa_san.webp", alt: "Retrato ilustrativo de un hombre san (khoisan)", nota: "Retrato ilustrativo generado por IA; no representa a un individuo concreto.", credito: "Retrato generado por IA" },
     },
     {
       id: "africa_pigmeos",
@@ -495,7 +495,7 @@ window.ATLAS_DATA = {
       moderno: true,
       descripcion: "Cazadores-recolectores de la selva del Congo (mbuti, baka y grupos afines): linajes profundos de África central. La baja estatura es una adaptación a la selva tropical densa. Población viva, documentada por genética moderna — no por ADN antiguo.",
       cautela: "'Pigmeo' agrupa a varios pueblos distintos con historias propias; no es un solo linaje ni una sola cultura.",
-      retrato: { src: "assets/retratos/africa_pigmeos.jpg", alt: "Retrato ilustrativo de un hombre del bosque centroafricano", nota: "Retrato ilustrativo generado por IA; no representa a un individuo concreto.", credito: "Retrato generado por IA" },
+      retrato: { src: "assets/retratos/africa_pigmeos.webp", alt: "Retrato ilustrativo de un hombre del bosque centroafricano", nota: "Retrato ilustrativo generado por IA; no representa a un individuo concreto.", credito: "Retrato generado por IA" },
     },
     {
       id: "africa_niloticos",
@@ -508,7 +508,7 @@ window.ATLAS_DATA = {
       moderno: true,
       descripcion: "Pastores de la sabana del Nilo Blanco (dinka, nuer, masái y afines): entre las estaturas promedio más altas del mundo, con extremidades largas que disipan el calor seco extremo. Población viva, documentada por genética moderna — no por ADN antiguo.",
       cautela: "'Nilótico' es una categoría lingüístico-cultural, no un linaje genético único.",
-      retrato: { src: "assets/retratos/africa_niloticos.jpg", alt: "Retrato ilustrativo de un hombre nilótico", nota: "Retrato ilustrativo generado por IA; no representa a un individuo concreto.", credito: "Retrato generado por IA" },
+      retrato: { src: "assets/retratos/africa_niloticos.webp", alt: "Retrato ilustrativo de un hombre nilótico", nota: "Retrato ilustrativo generado por IA; no representa a un individuo concreto.", credito: "Retrato generado por IA" },
     },
     {
       id: "africa_bantu",
@@ -521,7 +521,7 @@ window.ATLAS_DATA = {
       moderno: true,
       descripcion: "La expansión bantú —desde ~1500 a. C., originada en la frontera entre Camerún y Nigeria— es la mayor expansión demográfica de la historia africana: agricultura e hierro que reemplazaron o absorbieron a los cazadores-recolectores previos en gran parte del continente. Población viva, documentada por genética moderna — no por ADN antiguo.",
       cautela: "'Bantú' es una familia lingüística de enorme diversidad interna, no una población homogénea.",
-      retrato: { src: "assets/retratos/africa_bantu.jpg", alt: "Retrato ilustrativo de un hombre bantú", nota: "Retrato ilustrativo generado por IA; no representa a un individuo concreto.", credito: "Retrato generado por IA" },
+      retrato: { src: "assets/retratos/africa_bantu.webp", alt: "Retrato ilustrativo de un hombre bantú", nota: "Retrato ilustrativo generado por IA; no representa a un individuo concreto.", credito: "Retrato generado por IA" },
     },
     {
       id: "africa_cushita",
@@ -534,7 +534,7 @@ window.ATLAS_DATA = {
       moderno: true,
       descripcion: "Pueblos del Cuerno de África (oromo, somalí, amhara y afines): resultado de un mestizaje antiguo —hace 3.000 a 5.000 años— entre linajes africanos y migraciones de regreso desde Oriente Medio. Población viva, documentada por genética moderna — no por ADN antiguo.",
       cautela: "El componente euroasiático del Cuerno es prehistórico, no colonial ni reciente.",
-      retrato: { src: "assets/retratos/africa_cushita.jpg", alt: "Retrato ilustrativo de un hombre del Cuerno de África", nota: "Retrato ilustrativo generado por IA; no representa a un individuo concreto.", credito: "Retrato generado por IA" },
+      retrato: { src: "assets/retratos/africa_cushita.webp", alt: "Retrato ilustrativo de un hombre del Cuerno de África", nota: "Retrato ilustrativo generado por IA; no representa a un individuo concreto.", credito: "Retrato generado por IA" },
     },
     {
       id: "africa_amazigh",
@@ -547,7 +547,7 @@ window.ATLAS_DATA = {
       moderno: true,
       descripcion: "Pueblos amazigh del norte de África: continuidad con linajes paleolíticos del Magreb —como el de Taforalt, que el mapa sí tiene como muestra antigua— más capas de mezcla mediterránea. Población viva, documentada por genética moderna — no por ADN antiguo.",
       cautela: "El Sáhara fue una barrera intermitente, no un muro permanente: hubo idas y vueltas durante milenios.",
-      retrato: { src: "assets/retratos/africa_amazigh.jpg", alt: "Retrato ilustrativo de un hombre amazigh", nota: "Retrato ilustrativo generado por IA; no representa a un individuo concreto.", credito: "Retrato generado por IA" },
+      retrato: { src: "assets/retratos/africa_amazigh.webp", alt: "Retrato ilustrativo de un hombre amazigh", nota: "Retrato ilustrativo generado por IA; no representa a un individuo concreto.", credito: "Retrato generado por IA" },
     },
     {
       id: "australopiteco",
@@ -560,7 +560,7 @@ window.ATLAS_DATA = {
       sitios: ["lucy", "laetoli", "taung"],
       descripcion: "Los australopitecos (~4 a 2 millones de años): bípedos de cerebro pequeño, el eslabón entre los simios y el género Homo. 'Lucy' (Hadar, Etiopía) es el esqueleto más famoso; Laetoli conserva huellas de pasos de hace 3,6 millones de años.",
       cautela: "No son ancestros directos garantizados de Homo: son el grupo del que emergió nuestro género.",
-      retrato: { src: "assets/retratos/australopiteco.jpg", alt: "Retrato interpretativo de un australopiteco (Hadar)", nota: "Retrato interpretativo generado por IA a partir de reconstrucciones de museo; no es una reconstrucción publicada.", credito: "Retrato generado por IA" },
+      retrato: { src: "assets/retratos/australopiteco.webp", alt: "Retrato interpretativo de un australopiteco (Hadar)", nota: "Retrato interpretativo generado por IA a partir de reconstrucciones de museo; no es una reconstrucción publicada.", credito: "Retrato generado por IA" },
     },
     {
       id: "habilis",
@@ -573,7 +573,7 @@ window.ATLAS_DATA = {
       sitios: ["olduvai"],
       descripcion: "Homo habilis, el 'hombre habilidoso' (~2,4 a 1,6 millones de años): primer representante del género Homo, asociado a las primeras herramientas de piedra tallada (industria olduvayense).",
       cautela: "Su lugar exacto en el árbol es debatido: algunos lo ven como australopiteco tardío más que como Homo.",
-      retrato: { src: "assets/retratos/habilis.jpg", alt: "Retrato interpretativo de Homo habilis (Olduvai)", nota: "Retrato interpretativo generado por IA a partir de reconstrucciones de museo; no es una reconstrucción publicada.", credito: "Retrato generado por IA" },
+      retrato: { src: "assets/retratos/habilis.webp", alt: "Retrato interpretativo de Homo habilis (Olduvai)", nota: "Retrato interpretativo generado por IA a partir de reconstrucciones de museo; no es una reconstrucción publicada.", credito: "Retrato generado por IA" },
     },
     {
       id: "erectus",
@@ -586,7 +586,7 @@ window.ATLAS_DATA = {
       sitios: ["dmanisi", "zhoukoudian", "sangiran"],
       descripcion: "Homo erectus: el primer hominino en salir de África (~1,8 millones de años, Dmanisi, Georgia) y en controlar el fuego. Llegó hasta Java y China, y duró casi 2 millones de años: el hominino más longevo.",
       cautela: "Bajo 'erectus' se agrupan fósiles muy diversos de tres continentes; puede ser más de una especie.",
-      retrato: { src: "assets/retratos/erectus.jpg", alt: "Retrato interpretativo de Homo erectus (Dmanisi)", nota: "Retrato interpretativo generado por IA a partir de reconstrucciones de museo; no es una reconstrucción publicada.", credito: "Retrato generado por IA" },
+      retrato: { src: "assets/retratos/erectus.webp", alt: "Retrato interpretativo de Homo erectus (Dmanisi)", nota: "Retrato interpretativo generado por IA a partir de reconstrucciones de museo; no es una reconstrucción publicada.", credito: "Retrato generado por IA" },
     },
     {
       id: "heidelbergensis",
@@ -599,7 +599,7 @@ window.ATLAS_DATA = {
       sitios: ["kabwe", "bodo"],
       descripcion: "Homo heidelbergensis (~700 a 200 mil años): el ancestro común más probable de neandertales y sapiens. El cráneo de Kabwe (Zambia, 'Broken Hill') es su fósil emblema africano.",
       cautela: "Especie 'cajón de sastre': agrupa fósiles africanos y europeos que podrían ser linajes distintos.",
-      retrato: { src: "assets/retratos/heidelbergensis.jpg", alt: "Retrato interpretativo de Homo heidelbergensis (Kabwe)", nota: "Retrato interpretativo generado por IA a partir de reconstrucciones de museo; no es una reconstrucción publicada.", credito: "Retrato generado por IA" },
+      retrato: { src: "assets/retratos/heidelbergensis.webp", alt: "Retrato interpretativo de Homo heidelbergensis (Kabwe)", nota: "Retrato interpretativo generado por IA a partir de reconstrucciones de museo; no es una reconstrucción publicada.", credito: "Retrato generado por IA" },
     },
     {
       id: "neandertal",
@@ -612,7 +612,7 @@ window.ATLAS_DATA = {
       sitios: ["la_chapelle", "shanidar", "vindija"],
       descripcion: "Neandertales (~400 a 40 mil años): cazadores robustos de la Europa glacial, con cultura, fuego, herramientas y entierros. No se extinguieron del todo: viven en nosotros — las poblaciones no africanas llevan ~2% de ADN neandertal.",
       cautela: "El 2% es un promedio: varía por población y por región del genoma.",
-      retrato: { src: "assets/retratos/neandertal.jpg", alt: "Retrato interpretativo de un neandertal (La Chapelle)", nota: "Retrato interpretativo generado por IA a partir de reconstrucciones de museo; no es una reconstrucción publicada.", credito: "Retrato generado por IA" },
+      retrato: { src: "assets/retratos/neandertal.webp", alt: "Retrato interpretativo de un neandertal (La Chapelle)", nota: "Retrato interpretativo generado por IA a partir de reconstrucciones de museo; no es una reconstrucción publicada.", credito: "Retrato generado por IA" },
     },
     {
       id: "denisovano",
@@ -625,7 +625,7 @@ window.ATLAS_DATA = {
       sitios: ["denisova"],
       descripcion: "Denisovanos: conocidos casi solo por ADN —un hueso de dedo en una cueva de Siberia—. Su legado vive en Asia y Oceanía: algunos melanesios llevan hasta ~5% de ADN denisovano, el mayor aporte arcaico conocido.",
       cautela: "Casi no hay fósiles: todo lo que se sabe de su aspecto viene del ADN y de una mandíbula (Xiahe, Tíbet).",
-      retrato: { src: "assets/retratos/denisovano.jpg", alt: "Retrato interpretativo de un denisovano", nota: "Retrato interpretativo generado por IA; los denisovanos casi no tienen registro fósil facial.", credito: "Retrato generado por IA" },
+      retrato: { src: "assets/retratos/denisovano.webp", alt: "Retrato interpretativo de un denisovano", nota: "Retrato interpretativo generado por IA; los denisovanos casi no tienen registro fósil facial.", credito: "Retrato generado por IA" },
     },
     {
       id: "sapiens_temprano",
@@ -638,7 +638,7 @@ window.ATLAS_DATA = {
       extincion_ap: 60000,
       descripcion: "Los primeros Homo sapiens (~300 mil años, Jebel Irhoud, Marruecos): cara ya moderna con cráneo todavía alargado. El origen de nuestra especie es africano —y mucho más antiguo de lo que se creía hasta 2017.",
       cautela: "'Sapiens temprano' es un mosaico de poblaciones africanas, no un único grupo.",
-      retrato: { src: "assets/retratos/sapiens_temprano.jpg", alt: "Retrato interpretativo de un sapiens temprano (Jebel Irhoud)", nota: "Retrato interpretativo generado por IA a partir de reconstrucciones de museo; no es una reconstrucción publicada.", credito: "Retrato generado por IA" },
+      retrato: { src: "assets/retratos/sapiens_temprano.webp", alt: "Retrato interpretativo de un sapiens temprano (Jebel Irhoud)", nota: "Retrato interpretativo generado por IA a partir de reconstrucciones de museo; no es una reconstrucción publicada.", credito: "Retrato generado por IA" },
     },
 
   ],

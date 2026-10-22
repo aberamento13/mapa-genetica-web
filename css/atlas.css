@@ -959,36 +959,32 @@ h1 {
 }
 .zona-label-foto {
   position: relative;
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  overflow: hidden;
-  border-radius: 50%;
-  background: #171d27;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, .55), 0 0 0 1px rgba(240, 235, 222, .28);
-  transition: transform .14s ease, box-shadow .14s ease;
+  display: block;
+  width: auto;
+  height: 64px;
+  background: none;
+  overflow: visible;
+  transition: transform .14s ease, filter .14s ease;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, .6));
 }
 .zona-label:hover .zona-label-foto {
-  transform: scale(1.08);
-  box-shadow: 0 5px 16px rgba(0, 0, 0, .6), 0 0 0 2px var(--c);
+  transform: scale(1.1);
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, .65)) drop-shadow(0 0 7px var(--c));
 }
 .zona-label.activa .zona-label-foto {
-  box-shadow: 0 5px 16px rgba(0, 0, 0, .6), 0 0 0 2px var(--oro);
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, .65)) drop-shadow(0 0 9px var(--oro));
 }
 .zona-label-foto img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
+  position: static;
+  width: auto;
   height: 100%;
-  object-fit: cover;
-  object-position: 50% 32%;
+  object-fit: contain;
   display: block;
-  filter: sepia(.1) contrast(1.05);
 }
 .zona-label.moderno .zona-label-foto {
-  box-shadow: 0 3px 12px rgba(0, 0, 0, .55), 0 0 0 2px rgba(127, 176, 105, .75);
-  border: 1px dashed rgba(127, 176, 105, .9);
+  box-shadow: none;
+  border: none;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, .6)) drop-shadow(0 0 6px rgba(127, 176, 105, .85));
 }
 .zona-label-foto .silueta-svg {
   width: 32px;
