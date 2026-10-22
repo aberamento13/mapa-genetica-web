@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ADN antiguo · zonas, rutas y retratos</title>
+<meta name="description" content="Prototipo de un atlas de ADN antiguo con zonas de muestras publicadas, rutas de dispersión y retratos de individuos. No es un mapa de razas.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="css/atlas.css">
+</head>
+<body>
+
+<div id="app">
+  <aside id="panel" aria-label="Panel de ADN antiguo">
+    <header id="cabecera">
+      <a class="volver" href="../mapa-historico/index.html">← Atlas histórico</a>
+      <div class="cabecera-titulo">
+        <h1>ADN antiguo</h1>
+        <span class="piloto">0.3 · prototipo</span>
+      </div>
+      <p class="subtitulo">Zonas, rutas y retratos de individuos concretos. No puntos sueltos.</p>
+      <p class="aviso">No es un mapa de razas. El color marca regiones naturales con sitios; los retratos, individuos.</p>
+      <p class="sesgo-corto" id="sesgo-corto">62 sitios · 5 en África · 5 en Oceanía.</p>
+    </header>
+
+    <section class="bloque" id="bloque-tiempo">
+      <div class="rotulo">Ventana temporal</div>
+      <div class="edad-linea">
+        <span id="edad">hoy</span>
+        <span id="contador" class="contador">24 sitios · 9 zonas</span>
+      </div>
+      <div class="pista">
+        <div id="hitos" class="hitos" aria-label="Fechas de referencia"></div>
+        <input id="slider" class="slider" type="range" min="-45000" max="0" step="100" value="0" aria-label="Años antes del presente">
+      </div>
+      <div class="controles">
+        <button id="play" class="boton" type="button"><span id="play-icono" aria-hidden="true">▶</span> Recorrer</button>
+        <button id="reset" class="boton" type="button">Todos</button>
+        <button id="rutas-toggle" class="boton activo" type="button" aria-pressed="true">Rutas</button>
+      </div>
+      <div id="rutas-lista" class="rutas-lista rutas-tira" aria-label="Rutas publicadas"></div>
+      <p class="nota">Filtra zonas por edad. Rutas esquemáticas; clic para fuente.</p>
+    </section>
+
+    <section class="bloque" id="bloque-filtros">
+      <div class="rotulo">Continente</div>
+      <div id="filtros" class="filtros"></div>
+      <p class="nota">Color = zona de muestreo, no frontera.</p>
+    </section>
+
+    <section class="bloque" id="bloque-lista">
+      <div class="rotulo">Zonas de muestras <span id="lista-conteo" class="rotulo-conteo"></span></div>
+      <input id="buscar" class="buscar buscar-lista" type="search" placeholder="Buscar zona o sitio: Lapa, Andes, sambaqui…" aria-label="Buscar zona o sitio" autocomplete="off">
+      <ul id="lista" class="lista-zonas"></ul>
+      <p id="lista-vacia" class="vacio" hidden></p>
+    </section>
+
+    <section class="bloque detalle" id="detalle" aria-live="polite"></section>
+
+    <footer class="pie">
+      <button id="info" class="enlace" type="button">Método, fuentes y retratos</button>
+      <span>Fondo: Esri</span>
+    </footer>
+  </aside>
+
+  <main id="mapa-wrap">
+    <div id="mapa" aria-label="Mapa de zonas de muestras de ADN antiguo"></div>
+
+    <div id="mapa-cabecera" class="mapa-cabecera">
+      <div class="mapa-rotulo">Zonas de ADN antiguo</div>
+      <p>El color marca <b>dónde hay ADN antiguo publicado</b>, no dónde hubo gente: las áreas sin color están habitadas, lo que falta son muestras. Un sitio = una muestra; una zona = regiones naturales donde hay sitios.</p>    </div>
+
+    <div id="mapa-acciones">
+      <button id="btn-vista" class="mapa-boton" type="button">Vista oscura</button>
+    </div>
+
+    <div id="leyenda" class="leyenda-mapa" aria-label="Leyenda del mapa"></div>
+
+    <div id="pista-zoom" class="pista-zoom" hidden>Acercate al mapa para ver los retratos y los nombres de cada zona.</div>
+
+    <div id="cargando" class="cargando" role="status">Cargando zonas, rutas y retratos…</div>
+  </main>
+</div>
+
+<div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo" hidden>
+  <div class="modal-caja">
+    <button id="cerrar" class="modal-cerrar" type="button" aria-label="Cerrar">×</button>
+    <p class="modal-rotulo">ADN antiguo · 0.3</p>
+    <h2 id="modal-titulo">Cómo leer este mapa</h2>
+
+    <div class="modal-columnas">
+      <section>
+        <h3>Zonas, no puntos</h3>
+        <p>Cada área es una <b>región natural real</b> (Natural Earth: cordilleras, mesetas, llanuras, cuencas, valles) donde se publicaron sitios de ADN antiguo, o la región nombrada más cercana cuando el sitio cae fuera de cualquier otra. Son unidades <b>físicas</b> que ya existían en el Pleistoceno: el contorno sigue el terreno y <b>nunca se pinta sobre el agua</b>.</p>
+        <p>Una zona no es un territorio, una frontera genética ni un «territorio ancestral». Si una zona parece vacía, puede ser un problema de muestreo, no una ausencia de gente. El color marca <b>dónde hay evidencia</b>; el halo marca la difusión posible: por eso las áreas <b>se expanden con el tiempo</b>, de forma gradual.</p></p>
+
+        <h3>Rutas, no caminos exactos</h3>
+        <p>Las líneas discontinuas son <b>rutas esquemáticas</b> basadas en hipótesis publicadas. No son trayectos únicos ni fechas exactas. Sirven para leer el contexto de dispersión, no para trazar fronteras.</p>
+        <p>Las ramas hacia Amazonia y Patagonia son simplificaciones. La evidencia genética y arqueológica discute rutas costeras, corredores interiores, tiempos y paradas.</p>
+
+        <h3>Retratos, no razas</h3>
+        <p>Los retratos son reconstrucciones forenses o imágenes de <b>individuos concretos</b>, no fotografías de «razas». Cuando no hay un retrato publicado, mostramos una silueta y lo decimos: no inventamos una cara.</p>
+        <p>El rótulo del mapa nombra la <b>población arqueológica</b> a la que pertenecen los genomas de cada zona (Lagoa Santa, euroasiáticos, mayas, andinos…). Es un rótulo de contexto histórico, no una «raza» ni una identidad cerrada: un genoma no define un pueblo, una cultura ni una lengua, y las categorías de ascendencia son modelos estadísticos, no esencias.</p>
+
+        <h3>Qué muestra la línea de tiempo</h3>
+        <p>Filtra las zonas según la edad de sus sitios. Una zona permanece visible si al menos uno de sus sitios entra en la ventana temporal. Cada región natural se enciende con la fecha de su sitio y su halo de difusión se ensancha a medida que avanza el reloj: el color y el degradado cambian de forma continua, sin cortes, y el mapa <b>se expande</b> hacia el presente. Las rutas se atenúan cuando no están activas, pero quedan como contexto.</p>
+      </section>
+
+      <section>
+        <h3>Sesgo de muestreo</h3>
+        <p>La mayoría de los genomas antiguos publicados en la primera década de la genómica antigua provienen de Europa y Asia templada. El ADN se conserva peor en climas cálidos y húmedos; el muestreo depende de permisos, financiación, instituciones y decisiones de investigadores y comunidades.</p>
+        <p>Este prototipo reúne 62 sitios: 26 en América, 17 en Asia, 9 en Europa, 5 en África y 5 en Oceanía. Sigue siendo una muestra mínima frente a la diversidad real: donde no hay datos, no hay ausencia de gente.</p>
+
+        <h3>Ética</h3>
+        <p>Los restos humanos tienen comunidades descendientes. La investigación genética del pasado requiere permisos, consulta y cuidado. Este prototipo no reemplaza esos procesos ni asigna identidades a personas vivas.</p>
+
+        <h3>Fuentes de método</h3>
+        <ul id="fuentes-metodo" class="fuentes"></ul>
+
+        <h3>Rutas y sus fuentes</h3>
+        <div id="fuentes-rutas" class="fuentes-sitios"></div>
+
+        <h3>Fuentes por sitio</h3>
+        <div id="fuentes-sitios" class="fuentes-sitios"></div>
+
+        <h3>Créditos de imágenes</h3>
+        <ul id="creditos-imagenes" class="creditos-imagenes"></ul>
+
+        <h3>Estado</h3>
+        <p>Prototipo local, sin commit ni despliegue. No modifica el atlas histórico. Las fechas, los polígonos y las lecturas se pueden discutir y corregir con literatura.</p>
+      </section>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="data/atlas-data.js"></script>
+<script src="data/regiones.js"></script>
+<script src="js/atlas.js"></script>
+</body>
+</html>
