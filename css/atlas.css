@@ -862,6 +862,14 @@ h1 {
   border-top: 1px dashed var(--verde);
   flex: 0 0 auto;
 }
+.leyenda-moderno {
+  width: 13px;
+  height: 9px;
+  border: 1px dashed #7fb069;
+  border-radius: 4px;
+  background: rgba(127, 176, 105, .3);
+  flex: 0 0 auto;
+}
 .leyenda-retrato {
   display: grid;
   place-items: center;
@@ -967,6 +975,10 @@ h1 {
   object-position: 50% 32%;
   display: block;
   filter: sepia(.1) contrast(1.05);
+}
+.zona-label.moderno .zona-label-foto {
+  box-shadow: 0 3px 12px rgba(0, 0, 0, .55), 0 0 0 2px rgba(127, 176, 105, .75);
+  border: 1px dashed rgba(127, 176, 105, .9);
 }
 .zona-label-foto .silueta-svg {
   width: 32px;

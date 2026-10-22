@@ -18,14 +18,27 @@
     .toLowerCase();
   const numero = new Intl.NumberFormat('es-AR');
 
+  const EDAD_MAX = 4000000; // 4 millones de años: australopitecos
   const HITOS = [
+    { year: -4000000, texto: '4 M' },
+    { year: -2000000, texto: '2 M' },
+    { year: -1000000, texto: '1 M' },
+    { year: -300000, texto: '300 mil' },
     { year: -45000, texto: '45 mil' },
-    { year: -30000, texto: '30 mil' },
-    { year: -20000, texto: '20 mil' },
     { year: -10000, texto: '10 mil' },
-    { year: -5000, texto: '5 mil' },
     { year: 0, texto: 'hoy' }
   ];
+
+  /* El slider es logarítmico: 0 = hoy, 1000 = 4 M AP. Así 4 millones de años
+     conviven con los últimos 45 mil sin aplastarlos. */
+  function sliderToYear(p) {
+    const edad = Math.pow(10, (p / 1000) * Math.log10(EDAD_MAX + 1)) - 1;
+    return -Math.round(edad);
+  }
+  function yearToSlider(year) {
+    const edad = Math.max(0, -year);
+    return Math.round(1000 * Math.log10(edad + 1) / Math.log10(EDAD_MAX + 1));
+  }
 
   // Capas del halo de difusión: anillos concéntricos para que el degradado
   // sea suave y la expansión se vea continua, no un corte.
@@ -406,6 +419,7 @@
       color: colorZona(z),
       weight: 2,
       opacity: .95,
+      ...(z.moderno ? { dashArray: '7 7' } : {}),
       fillColor: colorZona(z),
       fillOpacity: opacidadZona(),
       lineJoin: 'round',
@@ -607,7 +621,7 @@
     const foto = retrato.src
       ? `<img src="${escapar(retrato.src)}" alt="${escapar(retrato.alt || nombre)}" loading="lazy">`
       : SVG_SILUETA('silueta-svg');
-    const html = `<div class="zona-label" style="--c:${escapar(colorZona(z))}">
+    const html = `<div class="zona-label${z.moderno ? ' moderno' : ''}" style="--c:${escapar(colorZona(z))}">
       <span class="zona-label-foto${retrato.src ? '' : ' silueta'}">${foto}</span>
       <span class="zona-label-nombre">${escapar(nombre)}</span>
     </div>`;
@@ -783,6 +797,7 @@
       <div class="leyenda-item"><span class="leyenda-halo"></span>Difusión posible (halo)</div>
       <div class="leyenda-item"><span class="leyenda-linea"></span>Ruta publicada</div>
       <div class="leyenda-item"><span class="leyenda-retrato">◐</span>Retrato de individuo</div>
+      <div class="leyenda-item"><span class="leyenda-moderno"></span>Población actual (ADN moderno)</div>
       <p class="leyenda-nota">Las áreas son regiones naturales (cordilleras, mesetas, llanuras, cuencas) donde hay sitios publicados: siguen el terreno y nunca el agua. El color marca dónde hay ADN antiguo, no dónde hubo gente.</p>`;
   }
 
@@ -799,6 +814,7 @@
   }
 
   function periodoZona(z) {
+    if (z.edad_max === 0 && z.edad_min === 0) return 'Actualidad';
     if (z.edad_max === z.edad_min) return `hace ${numero.format(z.edad_max)} años`;
     return `hace ${numero.format(z.edad_max)} – ${numero.format(z.edad_min)} años`;
   }
@@ -905,14 +921,14 @@
   }
 
   function actualizar(year, forzar = false) {
-    const y = clamp(Number(year) || 0, -45000, 0);
+    const y = clamp(Number(year) || 0, -EDAD_MAX, 0);
     estado.year = y;
 
     const slider = $('#slider');
     if (slider) {
-      slider.value = String(y);
-      const pct = ((y + 45000) / 45000) * 100;
-      slider.style.setProperty('--p', `${pct}%`);
+      const pos = yearToSlider(y);
+      slider.value = String(pos);
+      slider.style.setProperty('--p', `${(pos / 1000) * 100}%`);
     }
     const edad = $('#edad');
     if (edad) edad.textContent = formatearEdad(y);
@@ -979,7 +995,12 @@
 
   function formatearEdad(year) {
     if (year >= -100) return 'hoy';
-    return `hace ${numero.format(-year)} años`;
+    const edad = -year;
+    if (edad >= 1000000) {
+      const m = edad / 1000000;
+      return `hace ${m >= 10 ? Math.round(m) : (Math.round(m * 10) / 10)} millones de años`;
+    }
+    return `hace ${numero.format(edad)} años`;
   }
 
   function actualizarTarjetas() {
@@ -1331,19 +1352,19 @@
           <p class="detalle-eyebrow">${escapar(z.poblacion || 'Zona de muestras')}</p>
           <h2>${escapar(z.nombre)}</h2>
         </div>
-        <span class="edad-sitio">${escapar(periodoZona(z))}</span>
+        <span class="edad-sitio">${z.moderno ? 'Actualidad · ADN moderno' : escapar(periodoZona(z))}</span>
       </div>
       <p class="descripcion">${escapar(z.descripcion || '')}</p>
       <div class="ficha-meta">
         <div><span>Países</span><b>${escapar(paises)}</b></div>
-        <div><span>Sitios</span><b>${z._sitios.length}</b></div>
-        <div><span>Individuos</span><b>${escapar(individuosZona(z))}</b></div>
+        <div><span>${z.moderno ? 'Referencia' : 'Sitios'}</span><b>${z._sitios.length}</b></div>
+        <div><span>Individuos</span><b>${z.moderno ? 'poblacional' : escapar(individuosZona(z))}</b></div>
       </div>
       ${nota}
       ${listaRegiones ? `<h3>Regiones naturales</h3>${listaRegiones}<p class="cautela">Son regiones físicas del terreno (cordilleras, mesetas, llanuras, cuencas) con sitios publicados. No son fronteras administrativas ni territorios genéticos: el color marca dónde hay evidencia y el halo, la difusión posible.</p>` : ''}
       <h3>Qué no es</h3>
       <p class="cautela">${escapar(z.cautela || 'La zona es un área de muestreo; no es un territorio ni una frontera genética.')}</p>
-      <h3>Sitios publicados</h3>
+      <h3>${z.moderno ? 'Referencia poblacional' : 'Sitios publicados'}</h3>
       <div class="detalle-sitios">${sitios}</div>
       ${extra}
       <h3>Fuentes</h3>
@@ -1530,10 +1551,11 @@
       pausar();
       return;
     }
-    if (estado.year >= -100) actualizar(-45000, true);
+    if (estado.year >= -100) actualizar(-EDAD_MAX, true);
     estado.play = window.setInterval(() => {
-      const siguiente = Math.min(0, estado.year + 120);
-      actualizar(siguiente, true);
+      let siguiente = estado.year * 0.985;
+      if (siguiente > -300) siguiente = 0;
+      actualizar(Math.min(0, siguiente), true);
       if (siguiente >= 0) pausar();
     }, 60);
     const btn = $('#play');
@@ -1596,7 +1618,7 @@
     if (slider) {
       slider.addEventListener('input', (e) => {
         pausar();
-        actualizar(Number(e.target.value), true);
+        actualizar(sliderToYear(Number(e.target.value)), true);
       });
     }
 
@@ -1678,15 +1700,15 @@
       if (e.key === 'ArrowRight') {
         e.preventDefault();
         pausar();
-        actualizar(estado.year + 500, true);
+        actualizar(sliderToYear(Math.max(0, yearToSlider(estado.year) - 25)), true);
       } else if (e.key === 'ArrowLeft') {
         e.preventDefault();
         pausar();
-        actualizar(estado.year - 500, true);
+        actualizar(sliderToYear(Math.min(1000, yearToSlider(estado.year) + 25)), true);
       } else if (e.key === 'Home') {
         e.preventDefault();
         pausar();
-        actualizar(-45000, true);
+        actualizar(-EDAD_MAX, true);
       } else if (e.key === 'End') {
         e.preventDefault();
         pausar();
