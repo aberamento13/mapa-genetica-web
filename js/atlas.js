@@ -1546,17 +1546,41 @@
     }).join('');
   }
 
+  /* Puntos de cambio en el recorrido: posiciones del slider (log) donde aparece
+     al menos un sitio. El recorrido frena al llegar a cada uno y acelera en los
+     tramos vacíos; el pulso de brillo acelera con él. */
+  function puntosDeCambio() {
+    const set = new Set();
+    for (const z of estado.zonas) {
+      if (estado.continente !== 'todos' && z.continente !== estado.continente) continue;
+      for (const s of z._sitios) set.add(yearToSlider(-s.edad_ap));
+    }
+    return [...set].sort((a, b) => b - a);
+  }
+
+  function fijarPulso(ratio) {
+    const d = (4 / Math.min(Math.max(ratio, 1), 10)).toFixed(2);
+    document.documentElement.style.setProperty('--pulso-d', `${d}s`);
+  }
+
   function alternarPlay() {
     if (estado.play) {
       pausar();
       return;
     }
     if (estado.year >= -100) actualizar(-EDAD_MAX, true);
+    let p = yearToSlider(estado.year);
+    const cambios = puntosDeCambio();
     estado.play = window.setInterval(() => {
-      let siguiente = estado.year * 0.985;
-      if (siguiente > -300) siguiente = 0;
-      actualizar(Math.min(0, siguiente), true);
-      if (siguiente >= 0) pausar();
+      let dist = 1000;
+      for (const pc of cambios) {
+        if (pc < p - 0.5) { dist = p - pc; break; }
+      }
+      const dp = dist < 8 ? 1.2 : Math.min(dist * 0.12, 14);
+      p = Math.max(0, p - dp);
+      fijarPulso(dp / 1.2);
+      actualizar(sliderToYear(p), true);
+      if (p <= 0) pausar();
     }, 60);
     const btn = $('#play');
     if (btn) {
@@ -1569,6 +1593,7 @@
     if (!estado.play) return;
     window.clearInterval(estado.play);
     estado.play = null;
+    document.documentElement.style.setProperty('--pulso-d', '4s');
     const btn = $('#play');
     if (btn) {
       btn.innerHTML = '<span id="play-icono" aria-hidden="true">▶</span> Recorrer';

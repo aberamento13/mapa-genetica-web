@@ -870,6 +870,16 @@ h1 {
   background: rgba(127, 176, 105, .3);
   flex: 0 0 auto;
 }
+
+/* Pulso de brillo en las manchas: tenue siempre; se acelera con el recorrido
+   (la velocidad se fija desde JS con --pulso-d). */
+.zona-layer {
+  animation: pulso-brillo var(--pulso-d, 4s) ease-in-out infinite;
+}
+@keyframes pulso-brillo {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.16); }
+}
 .leyenda-retrato {
   display: grid;
   place-items: center;
