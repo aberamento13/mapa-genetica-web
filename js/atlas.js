@@ -1590,14 +1590,25 @@
     if (estado.year >= -100) actualizar(-EDAD_MAX, true);
     let p = yearToSlider(estado.year);
     const cambios = puntosDeCambio();
+    let holdHasta = 0;
+    let ultimoPunto = -1;
     estado.play = window.setInterval(() => {
-      let dist = 1000;
+      if (Date.now() < holdHasta) return;
+      let dist = 1000, pcCercano = -1;
       for (const pc of cambios) {
-        if (pc < p - 0.5) { dist = p - pc; break; }
+        if (pc < p - 0.5) { dist = p - pc; pcCercano = pc; break; }
       }
-      const dp = dist < 8 ? 1.2 : Math.min(dist * 0.12, 14);
+      if (dist < 8 && pcCercano !== ultimoPunto) {
+        /* llegamos a una población: frenar para que se lea bien + zoom tenue
+           del retrato en su apogeo */
+        ultimoPunto = pcCercano;
+        holdHasta = Date.now() + 1800;
+        marcarApogeo(pcCercano);
+        return;
+      }
+      const dp = dist < 8 ? 1.0 : Math.min(dist * 0.07, 6);
       p = Math.max(0, p - dp);
-      fijarPulso(dp / 1.2);
+      fijarPulso(dp / 1.0);
       actualizar(sliderToYear(p), true);
       if (p <= 0) pausar();
     }, 60);
@@ -1606,6 +1617,22 @@
       btn.innerHTML = '<span id="play-icono" aria-hidden="true">Ⅱ</span> Pausar';
       btn.classList.add('activo');
     }
+  }
+
+  /* Zoom tenue del retrato en el apogeo: cuando el recorrido llega a la fecha
+     de aparición de una zona, su etiqueta del mapa se agranda un poco y vuelve
+     sola al tamaño normal. */
+  function marcarApogeo(pc) {
+    estado.zonas.forEach((z) => {
+      if (!z._card || !z._sitios) return;
+      const esApogeo = z._sitios.some((s) => yearToSlider(-s.edad_ap) === pc);
+      if (!esApogeo) return;
+      const el = z._card.getElement();
+      const inner = el && el.querySelector('.zona-label');
+      if (!inner) return;
+      inner.classList.add('en-apogeo');
+      window.setTimeout(() => inner.classList.remove('en-apogeo'), 2600);
+    });
   }
 
   function pausar() {

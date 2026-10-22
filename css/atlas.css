@@ -971,6 +971,12 @@ h1 {
   transform: scale(1.1);
   filter: drop-shadow(0 6px 14px rgba(0, 0, 0, .65)) drop-shadow(0 0 7px var(--c));
 }
+/* apogeo durante el recorrido: el retrato se agranda un poco, tenue, y vuelve solo */
+.zona-label.en-apogeo .zona-label-foto {
+  transform: scale(1.5);
+  transition: transform .9s ease, filter .9s ease;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, .65)) drop-shadow(0 0 12px var(--c));
+}
 .zona-label.activa .zona-label-foto {
   filter: drop-shadow(0 6px 14px rgba(0, 0, 0, .65)) drop-shadow(0 0 9px var(--oro));
 }
