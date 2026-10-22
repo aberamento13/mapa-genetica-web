@@ -480,6 +480,7 @@
         color: colorBorde(z),
         weight: 1.1,
         opacity: 0,
+        ...(z.moderno ? { dashArray: '7 7' } : {}),
         fill: true,
         fillColor: colorZona(z),
         fillOpacity: 0,
